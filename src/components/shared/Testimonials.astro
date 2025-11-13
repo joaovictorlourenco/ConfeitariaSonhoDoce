@@ -1,0 +1,55 @@
+---
+import { Star } from "lucide-react";
+import { Card, CardContent } from "../ui/card";
+
+const testimonials = [
+  {
+    name: "Maria Silva",
+    text: "Os doces da Sonho Doce são simplesmente perfeitos! Encomendei para o aniversário da minha filha e todos adoraram. A qualidade e o sabor são incomparáveis!",
+    rating: 5,
+  },
+  {
+    name: "João Santos",
+    text: "Melhor brigadeiro gourmet que já provei! O atendimento é excelente e a entrega sempre pontual. Super recomendo!",
+    rating: 5,
+  },
+  {
+    name: "Ana Paula",
+    text: "Fiz meu bolo de casamento com a Sonho Doce e foi um sucesso! Lindo e delicioso. Todos os convidados elogiaram muito!",
+    rating: 5,
+  },
+];
+---
+
+<section id="depoimentos" class="py-20 lg:py-32">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-4 mb-16">
+      <p class="text-sm font-mono text-primary uppercase tracking-wider">
+        Depoimentos
+      </p>
+      <h2 class="text-4xl sm:text-5xl font-bold text-balance">
+        O que nossos clientes dizem
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        testimonials.map((testimonial, index) => (
+          <Card key={index} className="border-border/50">
+            <CardContent className="p-6 space-y-4">
+              <div class="flex gap-1">
+                {Array.from({ length: testimonial.rating }).map((_, i) => (
+                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                ))}
+              </div>
+              <p class="text-muted-foreground leading-relaxed italic">
+                "{testimonial.text}"
+              </p>
+              <p class="font-bold text-foreground">{testimonial.name}</p>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>

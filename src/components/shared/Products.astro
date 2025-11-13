@@ -1,0 +1,82 @@
+---
+import { Card, CardContent } from "../ui/card";
+
+const products = [
+  {
+    name: "Brigadeiros Gourmet",
+    description:
+      "Brigadeiros artesanais com diversos sabores e coberturas especiais",
+    image: "/gourmet-brigadeiros-chocolate-truffles-assorted.jpg",
+  },
+  {
+    name: "Bolos Decorados",
+    description: "Bolos personalizados para todas as ocasiões especiais",
+    image: "/beautiful-decorated-celebration-cake-pink-frosting.jpg",
+  },
+  {
+    name: "Cupcakes",
+    description:
+      "Cupcakes deliciosos com coberturas cremosas e decorações encantadoras",
+    image: "/colorful-cupcakes-with-frosting-and-decorations.jpg",
+  },
+  {
+    name: "Docinhos de Festa",
+    description: "Variedade de docinhos finos para festas e eventos",
+    image: "/assorted-party-sweets-brigadeiro-beijinho.jpg",
+  },
+  {
+    name: "Tortas",
+    description: "Tortas artesanais com recheios irresistíveis",
+    image: "/delicious-fruit-tart-with-cream.jpg",
+  },
+  {
+    name: "Brownies",
+    description: "Brownies macios e intensos de chocolate",
+    image: "/chocolate-brownies-fudgy-rich.jpg",
+  },
+];
+---
+
+<section id="produtos" class="py-20 lg:py-32 bg-muted/30">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-4 mb-16">
+      <p class="text-sm font-mono text-primary uppercase tracking-wider">
+        Nossos Produtos
+      </p>
+      <h2 class="text-4xl sm:text-5xl font-bold text-balance">
+        Delícias que vão te conquistar
+      </h2>
+      <p
+        class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+      >
+        Conheça nossa seleção de doces artesanais, preparados diariamente com
+        ingredientes frescos e muito carinho
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        products.map((product, index) => (
+          <Card
+            key={index}
+            className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow"
+          >
+            <div class="aspect-square overflow-hidden bg-muted">
+              <img
+                src={product.image || "/placeholder.svg"}
+                alt={product.name}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <CardContent className="p-6 space-y-2">
+              <h3 class="text-xl font-bold">{product.name}</h3>
+              <p class="text-muted-foreground leading-relaxed">
+                {product.description}
+              </p>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>
