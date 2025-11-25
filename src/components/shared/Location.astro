@@ -1,0 +1,81 @@
+---
+import { MapPin } from "lucide-react";
+import { Button } from "../ui/button";
+
+const googleMapsUrl = "https://share.google/w3I7afZSFN0tiVIwx";
+---
+
+<section id="localizacao" class="py-16 bg-background">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-foreground mb-4">
+        Nos encontre em Uberlândia
+      </h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto">
+        Visite nossa confeitaria e prove os doces artesanais da Sonho Doce.
+        Estamos localizados no coração de Uberlândia, esperando por você!
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      {/* Mapa */}
+      <div class="rounded-2xl overflow-hidden shadow-lg h-96">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.9825410012127!2d-48.271832100000005!3d-18.8878557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4f4d31804e8db9%3A0xbb773007bdb7e83!2sSonho%20Doce!5e0!3m2!1spt-BR!2sbr!4v1764090701024!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          title="Mapa para Sonho Doce"
+          style={{ border: 0 }}
+          loading="lazy"></iframe>
+      </div>
+
+      {/* Informações */}
+      <div class="space-y-6">
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <div class="shrink-0">
+              <div
+                class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10"
+              >
+                <MapPin className="h-6 w-6 text-primary" />
+              </div>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-foreground mb-1">
+                Nossa Localização
+              </h3>
+              <p class="text-muted-foreground">Uberlândia, Minas Gerais</p>
+              <p class="text-sm text-muted-foreground mt-1">Bairro Brasil</p>
+            </div>
+          </div>
+        </div>
+
+        <Button
+          size="lg"
+          className="w-full rounded-full bg-primary hover:bg-primary/90 text-primary-foreground gap-2"
+        >
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex"
+          >
+            <MapPin className="h-5 w-5" />
+            Abrir no Google Maps
+          </a>
+        </Button>
+
+        <div class="bg-secondary rounded-xl p-6">
+          <p class="text-secondary-foreground/80 font-semibold mb-2">
+            Horário de Funcionamento
+          </p>
+          <ul class="space-y-1 text-secondary-foreground/80 text-sm">
+            <li>Segunda a Sexta: 9h às 18h</li>
+            <li>Sábado: 9h às 14h</li>
+            <li class="text-primary font-medium">Domingo: Fechado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

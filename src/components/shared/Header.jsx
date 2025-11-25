@@ -1,9 +1,8 @@
-import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-export function Header() {
+export function Header({ logoSrc }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -12,7 +11,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              src={logo.src}
+              src={logoSrc}
               alt="Logo Sonho Doce"
               className="rounded-full object-cover h-8 w-8"
             />
@@ -44,6 +43,12 @@ export function Header() {
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               Depoimentos
+            </a>
+            <a
+              href="#localizacao"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              Localização
             </a>
             <Button asChild className="rounded-full">
               <a href="#contato">Faça seu Pedido</a>

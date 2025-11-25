@@ -1,19 +1,35 @@
 ---
+import MetaTags from "@/components/SEO/MetaTags.astro";
 import Footer from "@/components/shared/Footer.astro";
 import { Header } from "@/components/shared/Header.jsx";
 import "../styles/global.css";
+
+import logo from "@/assets/logo.png";
+import { getImage } from "astro:assets";
+
+const logoOtimizada = await getImage({
+  src: logo,
+  width: 64,
+  format: "webp",
+  quality: 90,
+});
+
 const { content } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <title>{content.title}</title>
+    <MetaTags
+      title={content.title}
+      description="A Sonho Doce é uma confeitaria artesanal que oferece bolos, doces e sobremesas para todas as ocasiões. Fazemos tudo com muito amor e carinho para que você tenha a melhor experiência."
+    />
   </head>
   <body>
-    <Header client:load />
+    <Header client:load logoSrc={logoOtimizada.src} />
     <slot />
     <Footer />
   </body>

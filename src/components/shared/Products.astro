@@ -7,38 +7,45 @@ import copinhosImg from "@/assets/copinho.png";
 import trufaImg from "@/assets/trufa.jpeg";
 import { Image } from "astro:assets";
 import { Card, CardContent } from "../ui/card";
+
 const products = [
   {
     name: "Brigadeiros Gourmet",
     description:
       "Brigadeiros artesanais com diversos sabores e coberturas especiais",
     image: brigadeiroImg,
+    alt: "Bandeja com brigadeiros gourmet artesanais boleados com confeitos variados, incluindo chocolate belga, granulado e castanhas.",
   },
   {
     name: "Bolos de Festa",
     description: "Bolos personalizados para todas as ocasiões especiais",
     image: bolo,
+    alt: "Bolo de festa alto e decorado com cobertura cremosa e acabamento sofisticado, ideal para aniversários e celebrações.",
   },
   {
     name: "Copinhos de Chocolate",
     description:
       "Copinhos de chocolate recheados com deliciosos cremes e coberturas",
     image: copinhosImg,
+    alt: "Copinhos de chocolate nobre recheados com mousse cremoso e decorados com frutas frescas e raspas de chocolate.",
   },
   {
     name: "Trufas",
-    description: "Trufas finas com sabores variados e acabamento sofistido",
+    description: "Trufas finas com sabores variados e acabamento sofisticado",
     image: trufaImg,
+    alt: "Trufas finas de chocolate com acabamento brilhante e textura aveludada, exibindo recheio cremoso.",
   },
   {
     name: "Copinhos de Sobremesa",
     description: "Copinhos de Sobremesa artesanais com recheios irresistíveis",
     image: copinhoSobremesa,
+    alt: "Copinho de sobremesa individual transparente mostrando camadas intercaladas de creme, bolo e recheio generoso.",
   },
   {
     name: "Bolo de Corte",
     description: "Bolo de Corte macio e delicioso",
     image: boloCorte,
+    alt: "Fatia de bolo de corte servida no prato, destacando a massa fofinha e camadas úmidas de recheio.",
   },
 ];
 ---
@@ -70,7 +77,7 @@ const products = [
             <div class="aspect-square overflow-hidden bg-muted">
               <Image
                 src={product.image}
-                alt={product.name}
+                alt={product.alt}
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
