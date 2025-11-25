@@ -1,38 +1,44 @@
 ---
+import boloCorte from "@/assets/bolo-de-corte.png";
+import bolo from "@/assets/bolo.jpeg";
+import brigadeiroImg from "@/assets/brigadeiro.jpg";
+import copinhoSobremesa from "@/assets/copinho-sobremesa.jpeg";
+import copinhosImg from "@/assets/copinho.png";
+import trufaImg from "@/assets/trufa.jpeg";
+import { Image } from "astro:assets";
 import { Card, CardContent } from "../ui/card";
-
 const products = [
   {
     name: "Brigadeiros Gourmet",
     description:
       "Brigadeiros artesanais com diversos sabores e coberturas especiais",
-    image: "/gourmet-brigadeiros-chocolate-truffles-assorted.jpg",
+    image: brigadeiroImg,
   },
   {
-    name: "Bolos Decorados",
+    name: "Bolos de Festa",
     description: "Bolos personalizados para todas as ocasiões especiais",
-    image: "/beautiful-decorated-celebration-cake-pink-frosting.jpg",
+    image: bolo,
   },
   {
-    name: "Cupcakes",
+    name: "Copinhos de Chocolate",
     description:
-      "Cupcakes deliciosos com coberturas cremosas e decorações encantadoras",
-    image: "/colorful-cupcakes-with-frosting-and-decorations.jpg",
+      "Copinhos de chocolate recheados com deliciosos cremes e coberturas",
+    image: copinhosImg,
   },
   {
-    name: "Docinhos de Festa",
-    description: "Variedade de docinhos finos para festas e eventos",
-    image: "/assorted-party-sweets-brigadeiro-beijinho.jpg",
+    name: "Trufas",
+    description: "Trufas finas com sabores variados e acabamento sofistido",
+    image: trufaImg,
   },
   {
-    name: "Tortas",
-    description: "Tortas artesanais com recheios irresistíveis",
-    image: "/delicious-fruit-tart-with-cream.jpg",
+    name: "Copinhos de Sobremesa",
+    description: "Copinhos de Sobremesa artesanais com recheios irresistíveis",
+    image: copinhoSobremesa,
   },
   {
-    name: "Brownies",
-    description: "Brownies macios e intensos de chocolate",
-    image: "/chocolate-brownies-fudgy-rich.jpg",
+    name: "Bolo de Corte",
+    description: "Bolo de Corte macio e delicioso",
+    image: boloCorte,
   },
 ];
 ---
@@ -62,8 +68,8 @@ const products = [
             className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow"
           >
             <div class="aspect-square overflow-hidden bg-muted">
-              <img
-                src={product.image || "/placeholder.svg"}
+              <Image
+                src={product.image}
                 alt={product.name}
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />

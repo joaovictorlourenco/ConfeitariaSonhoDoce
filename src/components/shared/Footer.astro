@@ -1,4 +1,6 @@
 ---
+import logo from "@/assets/logo.png";
+import { Image } from "astro:assets";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { SiFacebook, SiInstagram, SiWhatsapp } from "react-icons/si";
 import { Button } from "../ui/button";
@@ -12,7 +14,9 @@ import { Button } from "../ui/button";
           <div
             class="flex h-10 w-10 items-center justify-center rounded-full bg-primary"
           >
-            <span class="text-xl text-primary-foreground">🧁</span>
+            <span class="text-xl text-primary-foreground">
+              <Image src={logo} alt="Sonho Doce logo" />
+            </span>
           </div>
           <span class="text-2xl font-bold text-secondary-foreground"
             >Sonho Doce</span
@@ -28,18 +32,18 @@ import { Button } from "../ui/button";
         <h3 class="text-lg font-bold">Contato</h3>
         <div class="space-y-3">
           <a
-            href="tel:+5534999999999"
+            href="tel:+5561983357945"
             class="flex items-center gap-3 text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
           >
             <Phone className="h-5 w-5" />
-            <span>(34) 99999-9999</span>
+            <span>(61) 98335-7945</span>
           </a>
           <a
-            href="mailto:contato@sonhodoce.com.br"
+            href="mailto:sonhodocce2025@gmail.com"
             class="flex items-center gap-3 text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
           >
             <Mail className="h-5 w-5" />
-            <span>contato@sonhodoce.com.br</span>
+            <span>sonhodocce2025@gmail.com</span>
           </a>
           <div class="flex items-start gap-3 text-secondary-foreground/80">
             <MapPin className="h-5 w-5 mt-1 shrink-0" />
@@ -67,7 +71,7 @@ import { Button } from "../ui/button";
             asChild
           >
             <a
-              href="https://instagram.com/sonhodoce"
+              href="https://www.instagram.com/sonhodoce.udia/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -82,7 +86,7 @@ import { Button } from "../ui/button";
             asChild
           >
             <a
-              href="https://facebook.com/sonhodoce"
+              href="https://www.facebook.com/profile.php?id=100063674823698"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -98,7 +102,7 @@ import { Button } from "../ui/button";
           >
             <!-- whatsapp -->
             <a
-              href="https://facebook.com/sonhodoce"
+              href="https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
