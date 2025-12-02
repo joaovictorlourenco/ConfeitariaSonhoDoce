@@ -4,16 +4,6 @@ import Footer from "@/components/shared/Footer.astro";
 import { Header } from "@/components/shared/Header.jsx";
 import "../styles/global.css";
 
-import logo from "@/assets/logo.png";
-import { getImage } from "astro:assets";
-
-const logoOtimizada = await getImage({
-  src: logo,
-  width: 64,
-  format: "webp",
-  quality: 90,
-});
-
 const { content } = Astro.props;
 ---
 
@@ -25,11 +15,13 @@ const { content } = Astro.props;
     <title>{content.title}</title>
     <MetaTags
       title={content.title}
-      description="A Sonho Doce é uma confeitaria artesanal que oferece bolos, doces e sobremesas para todas as ocasiões. Fazemos tudo com muito amor e carinho para que você tenha a melhor experiência."
+      description={content.description}
+      keywords={content.keywords}
+      image={content.image}
     />
   </head>
   <body>
-    <Header client:load logoSrc={logoOtimizada.src} />
+    <Header client:load logoSrc="/logo.png" />
     <slot />
     <Footer />
   </body>
