@@ -51,7 +51,9 @@ export function Header({ logoSrc }) {
               Localização
             </a>
             <Button asChild className="rounded-full">
-              <a href="#contato">Faça seu Pedido</a>
+              <a href="https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento.">
+                Faça seu Pedido
+              </a>
             </Button>
           </nav>
 
