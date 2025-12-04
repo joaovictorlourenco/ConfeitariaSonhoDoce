@@ -19,6 +19,20 @@ const { content } = Astro.props;
       keywords={content.keywords}
       image={content.image}
     />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0GT6Z2Z2V"
+    ></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag(...args) {
+        window.dataLayer.push(args);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-Z0GT6Z2Z2V");
+    </script>
   </head>
   <body>
     <Header client:load logoSrc="/logo.png" />
