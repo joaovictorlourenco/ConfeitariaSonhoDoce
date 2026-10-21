@@ -1,133 +1,30 @@
 ---
-import { Image } from "astro:assets";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { SiFacebook, SiInstagram, SiWhatsapp } from "react-icons/si";
-import logo from "../../../public/logo.png";
-import { Button } from "../ui/button";
+import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { whatsappUrl } from "@/lib/site";
 ---
-
-<footer id="contato" class="bg-secondary text-secondary-foreground">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-      <div class="space-y-4">
-        <div class="flex items-center gap-2">
-          <div
-            class="flex h-10 w-10 items-center justify-center rounded-full bg-white"
-          >
-            <span class="text-xl text-primary-foreground">
-              <Image src={logo} alt="Sonho Doce logo" />
-            </span>
-          </div>
-          <span class="text-2xl font-bold text-secondary-foreground"
-            >Sonho Doce</span
-          >
-        </div>
-        <p class="text-secondary-foreground/80 leading-relaxed">
-          Doces artesanais feitos com amor em Uberlândia, MG. Transformando
-          momentos especiais em memórias deliciosas.
-        </p>
+<footer id="contato" class="site-footer">
+  <div class="shell">
+    <div class="footer-invite">
+      <h2>Seu próximo momento<br />pode ser mais doce.</h2>
+      <a class="button button-primary" href={whatsappUrl}>Faça seu Pedido <ArrowUpRight size={19} strokeWidth={1.7} aria-hidden="true" /></a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#inicio"><img src="/logo.png" alt="" width="46" height="40" /><span>Sonho Doce</span></a>
+        <p>Doces artesanais feitos com amor em Uberlândia, MG. Transformando momentos especiais em memórias deliciosas.</p>
       </div>
-
-      <div class="space-y-4">
-        <h3 class="text-lg font-bold">Contato</h3>
-        <div class="space-y-3">
-          <a
-            href="tel:+5561983357945"
-            class="flex items-center gap-3 text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
-          >
-            <Phone className="h-5 w-5" />
-            <span>(61) 98335-7945</span>
-          </a>
-          <a
-            href="mailto:sonhodocce2025@gmail.com"
-            class="flex items-center gap-3 text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
-          >
-            <Mail className="h-5 w-5" />
-            <span>sonhodocce2025@gmail.com</span>
-          </a>
-          <div class="flex items-start gap-3 text-secondary-foreground/80">
-            <MapPin className="h-5 w-5 mt-1 shrink-0" />
-            <span>Uberlândia, Minas Gerais</span>
-          </div>
-        </div>
+      <div><h3>Contato</h3>
+        <a class="contact-link" href="tel:+5561983357945"><Phone size={16} strokeWidth={1.7} aria-hidden="true" />(61) 98335-7945</a>
+        <a class="contact-link" href="mailto:sonhodocce2025@gmail.com"><Mail size={16} strokeWidth={1.7} aria-hidden="true" />sonhodocce2025@gmail.com</a>
+        <p>Uberlândia, Minas Gerais</p>
       </div>
-
-      <div class="space-y-4">
-        <h3 class="text-lg font-bold">Horário de Atendimento</h3>
-        <div class="space-y-2 text-secondary-foreground/80">
-          <p>Segunda a Sexta: 9h às 18h</p>
-          <p>Sábado: 9h às 14h</p>
-          <p>Domingo: Fechado</p>
-        </div>
-      </div>
-
-      <div class="space-y-4">
-        <h3 class="text-lg font-bold">Redes Sociais</h3>
-        <div class="flex gap-3">
-          <Button
-            size="icon"
-            variant="outline"
-            className="rounded-full bg-secondary-foreground/10 border-secondary-foreground/20 hover:bg-secondary-foreground/20"
-            asChild
-          >
-            <a
-              href="https://www.instagram.com/sonhodoce.udia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <SiInstagram className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button
-            size="icon"
-            variant="outline"
-            className="rounded-full bg-secondary-foreground/10 border-secondary-foreground/20 hover:bg-secondary-foreground/20"
-            asChild
-          >
-            <a
-              href="https://www.facebook.com/profile.php?id=100063674823698"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <SiFacebook className="h-5 w-5" />
-            </a>
-          </Button>
-          <Button
-            size="icon"
-            variant="outline"
-            className="rounded-full bg-secondary-foreground/10 border-secondary-foreground/20 hover:bg-secondary-foreground/20"
-            asChild
-          >
-            <!-- whatsapp -->
-            <a
-              href="https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <SiWhatsapp className="h-5 w-5" />
-            </a>
-          </Button>
-        </div>
+      <div><h3>Horário de Atendimento</h3><p>Segunda a Sexta: 9h às 18h</p><p>Sábado: 9h às 14h</p><p>Domingo: Fechado</p></div>
+      <div><h3>Redes Sociais</h3>
+        <a class="social-link" href="https://www.instagram.com/sonhodoce.udia/" target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRight size={15} strokeWidth={1.7} aria-hidden="true" /></a>
+        <a class="social-link" href="https://www.facebook.com/profile.php?id=100063674823698" target="_blank" rel="noopener noreferrer">Facebook <ArrowUpRight size={15} strokeWidth={1.7} aria-hidden="true" /></a>
+        <a class="social-link" href={whatsappUrl}>WhatsApp <ArrowUpRight size={15} strokeWidth={1.7} aria-hidden="true" /></a>
       </div>
     </div>
-
-    <div
-      class="mt-12 pt-8 border-t border-secondary-foreground/20 text-center text-secondary-foreground/60"
-    >
-      <p>
-        &copy; {new Date().getFullYear()} Sonho Doce. Todos os direitos reservados.
-      </p>
-      <p>
-        feito por <a
-          href="https://joaovictorlourenco.github.io/AboutMe/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline hover:text-secondary-foreground">Diniz Tech</a
-        > &#128187;
-      </p>
-    </div>
+    <div class="footer-bottom"><p>&copy; {new Date().getFullYear()} Sonho Doce. Todos os direitos reservados.</p><p>feito por <a href="https://joaovictorlourenco.github.io/AboutMe/" target="_blank" rel="noopener noreferrer">Diniz Tech</a></p></div>
   </div>
 </footer>

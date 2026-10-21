@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T19:58:37.231Z",
+  "title": "Design System: Sonho Doce",
+  "extensions": {
+    "colorMeta": {
+      "background": {
+        "role": "neutral",
+        "displayName": "Fundo claro rosado"
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Texto escuro rosado",
+        "tonalRamp": [
+          "oklch(15% 0.0287 349.15)",
+          "oklch(26.43% 0.0287 349.15)",
+          "oklch(37.86% 0.0287 349.15)",
+          "oklch(49.29% 0.0287 349.15)",
+          "oklch(60.71% 0.0287 349.15)",
+          "oklch(72.14% 0.0287 349.15)",
+          "oklch(83.57% 0.0287 349.15)",
+          "oklch(95% 0.0287 349.15)"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Rosa principal",
+        "tonalRamp": [
+          "oklch(15% 0.1604 358.75)",
+          "oklch(26.43% 0.1604 358.75)",
+          "oklch(37.86% 0.1604 358.75)",
+          "oklch(49.29% 0.1604 358.75)",
+          "oklch(60.71% 0.1604 358.75)",
+          "oklch(72.14% 0.1604 358.75)",
+          "oklch(83.57% 0.1604 358.75)",
+          "oklch(95% 0.1604 358.75)"
+        ]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Rosa de interação",
+        "tonalRamp": [
+          "oklch(15% 0.1426 359.19)",
+          "oklch(26.43% 0.1426 359.19)",
+          "oklch(37.86% 0.1426 359.19)",
+          "oklch(49.29% 0.1426 359.19)",
+          "oklch(60.71% 0.1426 359.19)",
+          "oklch(72.14% 0.1426 359.19)",
+          "oklch(83.57% 0.1426 359.19)",
+          "oklch(95% 0.1426 359.19)"
+        ]
+      },
+      "primary-foreground": {
+        "role": "primary",
+        "displayName": "Texto sobre rosa",
+        "tonalRamp": [
+          "oklch(15% 0.0084 349.24)",
+          "oklch(26.43% 0.0084 349.24)",
+          "oklch(37.86% 0.0084 349.24)",
+          "oklch(49.29% 0.0084 349.24)",
+          "oklch(60.71% 0.0084 349.24)",
+          "oklch(72.14% 0.0084 349.24)",
+          "oklch(83.57% 0.0084 349.24)",
+          "oklch(95% 0.0084 349.24)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Superfície suave"
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Texto secundário",
+        "tonalRamp": [
+          "oklch(15% 0.0340 348.00)",
+          "oklch(26.43% 0.0340 348.00)",
+          "oklch(37.86% 0.0340 348.00)",
+          "oklch(49.29% 0.0340 348.00)",
+          "oklch(60.71% 0.0340 348.00)",
+          "oklch(72.14% 0.0340 348.00)",
+          "oklch(83.57% 0.0340 348.00)",
+          "oklch(95% 0.0340 348.00)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Divisória rosada",
+        "tonalRamp": [
+          "oklch(15% 0.0231 345.81)",
+          "oklch(26.43% 0.0231 345.81)",
+          "oklch(37.86% 0.0231 345.81)",
+          "oklch(49.29% 0.0231 345.81)",
+          "oklch(60.71% 0.0231 345.81)",
+          "oklch(72.14% 0.0231 345.81)",
+          "oklch(83.57% 0.0231 345.81)",
+          "oklch(95% 0.0231 345.81)"
+        ]
+      },
+      "hero-surface": {
+        "role": "neutral",
+        "displayName": "Superfície inicial"
+      },
+      "footer-surface": {
+        "role": "neutral",
+        "displayName": "Superfície do rodapé"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Título inicial",
+        "purpose": "Texto principal da abertura; tamanho adaptado em 1100px e 767px."
+      },
+      "headline": {
+        "displayName": "Título de seção",
+        "purpose": "Títulos principais das seções."
+      },
+      "title": {
+        "displayName": "Título de produto",
+        "purpose": "Nomes das categorias do catálogo."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Leitura geral da página."
+      },
+      "lead": {
+        "displayName": "Introdução",
+        "purpose": "Parágrafo inicial de apresentação."
+      },
+      "label": {
+        "displayName": "Ação",
+        "purpose": "Chamadas e links de ação."
+      },
+      "navigation": {
+        "displayName": "Navegação",
+        "purpose": "Links do cabeçalho e CTA compacto."
+      }
+    },
+    "shadows": [
+      {
+        "name": "flat",
+        "value": "none",
+        "purpose": "Interface implementada sem sombras; separação por cor de fundo e divisórias."
+      }
+    ],
+    "motion": [
+      {
+        "name": "interaction-duration",
+        "value": ".2s",
+        "purpose": "Mudanças de fundo e escala nos botões."
+      },
+      {
+        "name": "press-scale",
+        "value": "scale(.97)",
+        "purpose": "Resposta ao pressionar botões e ação circular de produto."
+      },
+      {
+        "name": "product-image-duration",
+        "value": ".45s",
+        "purpose": "Aproximação da fotografia de produto no hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Desativa animações, transições e rolagem suave."
+      },
+      {
+        "name": "catalog-arrival",
+        "value": "700ms cubic-bezier(.16, 1, .3, 1); translateY(18px); scale(.985); opacity .72; paired delay 90ms",
+        "purpose": "Entrada única das fotos do catálogo a 15% de visibilidade. Sem atraso no celular; cancelada com movimento reduzido; conteúdo visível sem JavaScript."
+      },
+      {
+        "name": "hero-arrive",
+        "value": ".65s cubic-bezier(.16, 1, .3, 1); translateY(14px); opacity .75; delays 0/80/160ms",
+        "purpose": "Entrada única de título, descrição e ações. No celular: .5s e 8px. Foto: .8s após 120ms. Foco nas ações interrompe seu movimento; reduced-motion desativa."
+      },
+      {
+        "name": "hero-settle",
+        "value": "1s 120ms cubic-bezier(.16, 1, .3, 1); scale(1.025) to scale(1)",
+        "purpose": "Acomodação sutil da foto inicial dentro da moldura, sem repetição e sem movimento reduzido."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "370px"
+      },
+      {
+        "name": "single-column-max",
+        "value": "767px"
+      },
+      {
+        "name": "compact-navigation-max",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botão principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA existente de encomenda pelo WhatsApp.",
+      "html": "<a class=\"ds-btn\" href=\"https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento.\">Faça seu Pedido <svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-btn{font-family:\"Outfit Variable\",sans-serif;display:inline-flex;justify-content:center;align-items:center;gap:12px;min-height:50px;padding:12px 24px;font-weight:500;font-size:.9375rem;line-height:1.6;border:0;border-radius:999px;white-space:nowrap;text-decoration:none;background:var(--primary);color:var(--primary-foreground);transition:background-color .2s,transform .2s}.ds-btn:hover{background:var(--primary-hover)}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible,.ds-text:focus-visible,.ds-order:focus-visible,.ds-nav a:focus-visible,.ds-map summary:focus-visible{outline:3px solid var(--primary);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-btn,.ds-order{transition:none}}"
+    },
+    {
+      "name": "Botão do cabeçalho",
+      "kind": "button",
+      "refersTo": "button-header",
+      "description": "Versão compacta do CTA exibida no cabeçalho horizontal.",
+      "html": "<a class=\"ds-btn ds-btn-header\" href=\"https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento.\">Faça seu Pedido <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-btn{font-family:\"Outfit Variable\",sans-serif;display:inline-flex;justify-content:center;align-items:center;gap:12px;min-height:50px;padding:12px 24px;font-weight:500;font-size:.9375rem;line-height:1.6;border:0;border-radius:999px;white-space:nowrap;text-decoration:none;background:var(--primary);color:var(--primary-foreground);transition:background-color .2s,transform .2s}.ds-btn:hover{background:var(--primary-hover)}.ds-btn:active{transform:scale(.97)}.ds-btn:focus-visible,.ds-text:focus-visible,.ds-order:focus-visible,.ds-nav a:focus-visible,.ds-map summary:focus-visible{outline:3px solid var(--primary);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-btn,.ds-order{transition:none}}.ds-btn-header{min-height:44px;padding:10px 20px;font-size:.875rem}"
+    },
+    {
+      "name": "Link textual",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "Ação secundária existente com texto e seta.",
+      "html": "<a class=\"ds-text\" href=\"#produtos\">Ver Produtos <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 5v14m7-7-7 7-7-7\"/></svg></a>",
+      "css": ".ds-text{font-family:\"Outfit Variable\",sans-serif;display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:.9375rem;font-weight:500;line-height:1.6;color:var(--foreground);text-decoration:none;text-underline-offset:.25em}.ds-text:hover{color:var(--primary);text-decoration:underline}.ds-btn:focus-visible,.ds-text:focus-visible,.ds-order:focus-visible,.ds-nav a:focus-visible,.ds-map summary:focus-visible{outline:3px solid var(--primary);outline-offset:5px}"
+    },
+    {
+      "name": "Ação circular de produto",
+      "kind": "button",
+      "refersTo": "product-order",
+      "description": "Controle existente ao lado dos dados de cada produto.",
+      "html": "<a class=\"ds-order\" href=\"https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20Brigadeiros%20Gourmet.\" aria-label=\"Pedir orçamento: Brigadeiros Gourmet\"><svg width=\"23\" height=\"23\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-order{display:grid;place-items:center;width:44px;height:44px;flex-shrink:0;border:1px solid var(--border);border-radius:50%;color:var(--primary);text-decoration:none;transition:background-color .2s,transform .2s}.ds-order:hover{background:var(--background)}.ds-order:active{transform:scale(.97)}.ds-btn:focus-visible,.ds-text:focus-visible,.ds-order:focus-visible,.ds-nav a:focus-visible,.ds-map summary:focus-visible{outline:3px solid var(--primary);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-btn,.ds-order{transition:none}}"
+    },
+    {
+      "name": "Navegação horizontal",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Links existentes de navegação por âncoras, antes do breakpoint compacto.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Navegação principal\"><a href=\"#inicio\">Início</a><a href=\"#sobre\">Sobre Nós</a><a href=\"#produtos\">Produtos</a><a href=\"#depoimentos\">Depoimentos</a><a href=\"#localizacao\">Localização</a></nav>",
+      "css": ".ds-nav{font-family:\"Outfit Variable\",sans-serif;display:flex;align-items:center;gap:24px;background:var(--background);color:var(--foreground);line-height:1.6}.ds-nav a{font-size:.875rem;padding-block:12px;color:inherit;text-decoration:none}.ds-nav a:hover{color:var(--primary)}.ds-btn:focus-visible,.ds-text:focus-visible,.ds-order:focus-visible,.ds-nav a:focus-visible,.ds-map summary:focus-visible{outline:3px solid var(--primary);outline-offset:5px}"
+    },
+    {
+      "name": "Mapa expansível",
+      "kind": "custom",
+      "refersTo": "map-disclosure",
+      "description": "Controle existente que apresenta a localização antes de revelar o iframe do Google Maps.",
+      "html": "<details class=\"ds-map\"><summary><svg width=\"40\" height=\"40\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.3\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg><strong>Sonho Doce</strong><span>Bairro Brasil, Uberlândia</span><span class=\"ds-map-action\">Ver mapa <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></span></summary><iframe title=\"Mapa para Sonho Doce, Bairro Brasil, Uberlândia\" src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.9825410012127!2d-48.271832100000005!3d-18.8878557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4f4d31804e8db9%3A0xbb773007bdb7e83!2sSonho%20Doce!5e0!3m2!1spt-BR!2sbr!4v1764090701024!5m2!1spt-BR!2sbr\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe></details>",
+      "css": ".ds-map{font-family:\"Outfit Variable\",sans-serif;border-radius:var(--radius);background:var(--muted);color:var(--foreground);overflow:hidden;line-height:1.6}.ds-map summary{min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;cursor:pointer;list-style:none}.ds-map summary::-webkit-details-marker{display:none}.ds-map summary>svg{color:var(--primary);margin-bottom:20px}.ds-map strong{font-size:1.5rem;font-weight:500;letter-spacing:-.02em}.ds-map summary>span:not(.ds-map-action){color:var(--muted-foreground)}.ds-map-action{display:inline-flex;align-items:center;gap:12px;color:var(--primary);font-weight:500;padding-block:12px;margin-top:12px}.ds-map[open] summary{min-height:auto;padding-block:24px}.ds-map[open] summary>svg,.ds-map[open] summary>span:not(.ds-map-action){display:none}.ds-map[open] .ds-map-action svg{transform:rotate(180deg)}.ds-map summary:hover .ds-map-action{text-decoration:underline}.ds-map iframe{display:block;width:100%;height:440px;border:0;border-radius:var(--radius);background:var(--muted)}@media(max-width:767px){.ds-map summary{min-height:280px}.ds-map iframe{height:300px}}.ds-btn:focus-visible,.ds-text:focus-visible,.ds-order:focus-visible,.ds-nav a:focus-visible,.ds-map summary:focus-visible{outline:3px solid var(--primary);outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "overview": "Esta documentação registra os estilos implementados em `src/styles/global.css` e nos componentes compartilhados da página. A evolução preserva a identidade rosa, o logo, as fotos existentes e o encaminhamento das encomendas para o WhatsApp, conforme os compromissos registrados em `PRODUCT.md`.\n\nA interface usa uma única família tipográfica, títulos de peso médio, áreas de respiro e fotografia de doces em destaque. A hierarquia nasce da escala dos textos, das diferenças de superfície e das proporções das colunas. A direção desta evolução foi calibrada em composição 6/10, movimento 4/10 e densidade 3/10; esses parâmetros descrevem a direção do trabalho e não são tokens CSS.",
+    "keyCharacteristics": [
+      "Rosa como único acento de interface sobre tema claro fixo, com fundos rosados suaves.",
+      "Fotografias e logo existentes como elementos de identidade.",
+      "Superfícies planas, cantos suaves nas imagens e botões em cápsula.",
+      "Movimento breve em interações e entrada inicial, respeitando movimento reduzido."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** preservar o rosa, o logo, as fotografias existentes e o fluxo de encomendas pelo WhatsApp.",
+      "**Do** usar Outfit Variable auto-hospedada e os papéis tipográficos registrados.",
+      "**Do** manter o tema claro fixo, inclusive em dispositivos configurados no modo escuro.",
+      "**Do** usar superfícies planas, divisórias finas e os raios compartilhados para imagens e ações.",
+      "**Do** preservar foco visível, alternativas textuais e a preferência por movimento reduzido.",
+      "**Do** adaptar colunas e navegação nos intervalos registrados antes de introduzir novos padrões."
+    ],
+    "donts": [
+      "**Don't** introduzir outro acento de interface ou substituir a identidade visual nesta evolução.",
+      "**Don't** aplicar sombras ou efeitos de vidro aos padrões planos existentes.",
+      "**Don't** transformar os itens de catálogo em uma pilha de painéis decorativos.",
+      "**Don't** tratar os exemplos do sidecar como novos componentes de produto ou acrescentar campos e filtros inexistentes.",
+      "**Don't** acrescentar preços, avaliações ou alegações factuais para preencher um layout."
+    ]
+  }
+}

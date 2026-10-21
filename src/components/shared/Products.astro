@@ -6,7 +6,7 @@ import copinhoSobremesa from "@/assets/copinho-sobremesa.jpeg";
 import copinhosImg from "@/assets/copinho.png";
 import trufaImg from "@/assets/trufa.jpeg";
 import { Image } from "astro:assets";
-import { Card, CardContent } from "../ui/card";
+import { ArrowUpRight } from "lucide-react";
 
 const products = [
   {
@@ -49,47 +49,64 @@ const products = [
   },
 ];
 ---
-
-<section id="produtos" class="py-20 lg:py-32 bg-muted/30">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center space-y-4 mb-16">
-      <p class="text-sm font-mono text-primary uppercase tracking-wider">
-        Nossos Produtos
-      </p>
-      <h2 class="text-4xl sm:text-5xl font-bold text-balance">
-        Delícias que vão te conquistar
-      </h2>
-      <p
-        class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-      >
-        Conheça nossa seleção de doces artesanais, preparados diariamente com
-        ingredientes frescos e muito carinho
-      </p>
+<section id="produtos" class="section products">
+  <div class="shell">
+    <div class="section-heading">
+      <h2>Delícias que vão<br />te conquistar.</h2>
+      <p>Conheça nossa seleção de doces artesanais, preparados diariamente com ingredientes frescos e muito carinho.</p>
     </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        products.map((product, index) => (
-          <Card
-            key={index}
-            className="overflow-hidden border-border/50 hover:shadow-lg transition-shadow"
-          >
-            <div class="aspect-square overflow-hidden bg-muted">
-              <Image
-                src={product.image}
-                alt={product.alt}
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <CardContent className="p-6 space-y-2">
-              <h3 class="text-xl font-bold">{product.name}</h3>
-              <p class="text-muted-foreground leading-relaxed">
-                {product.description}
-              </p>
-            </CardContent>
-          </Card>
-        ))
-      }
+    <div class="product-grid">
+      {products.map((product) => (
+        <article class="product">
+          <a class="product-image-link" href={`https://wa.me/5561983357945?text=${encodeURIComponent(`Olá, gostaria de um orçamento de ${product.name}.`)}`} aria-label={`Pedir orçamento: ${product.name}`}>
+            <Image src={product.image} alt={product.alt} widths={[400, 640, 960]} sizes="(max-width: 767px) 100vw, 50vw" loading="lazy" />
+          </a>
+          <div class="product-info">
+            <div><h3>{product.name}</h3><p>{product.description}</p></div>
+            <a class="product-order" href={`https://wa.me/5561983357945?text=${encodeURIComponent(`Olá, gostaria de um orçamento de ${product.name}.`)}`} aria-label={`Pedir orçamento: ${product.name}`}><ArrowUpRight size={23} strokeWidth={1.7} aria-hidden="true" /></a>
+          </div>
+        </article>
+      ))}
     </div>
   </div>
 </section>
+
+<script>
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const photos = document.querySelectorAll<HTMLElement>(".product-image-link");
+
+  if (!reduceMotion.matches && "IntersectionObserver" in window) {
+    const pending = new Set(photos);
+    const animations = new Set<Animation>();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        observer.unobserve(target);
+        pending.delete(target as HTMLElement);
+
+        if (!reduceMotion.matches && !target.matches(":focus-within")) {
+          const index = Array.from(photos).indexOf(target as HTMLElement);
+          const paired = window.matchMedia("(min-width: 768px)").matches;
+          const animation = target.animate(
+            [
+              { transform: "translateY(18px) scale(.985)", opacity: .72 },
+              { transform: "translateY(0) scale(1)", opacity: 1 },
+            ],
+            { duration: 700, delay: paired ? (index % 2) * 90 : 0, easing: "cubic-bezier(.16, 1, .3, 1)", fill: "backwards" },
+          );
+          animations.add(animation);
+          animation.onfinish = () => animations.delete(animation);
+        }
+      });
+      if (!pending.size) observer.disconnect();
+    }, { threshold: .15 });
+
+    photos.forEach((photo) => observer.observe(photo));
+    reduceMotion.addEventListener("change", ({ matches }) => {
+      if (!matches) return;
+      observer.disconnect();
+      animations.forEach((animation) => animation.cancel());
+      animations.clear();
+    });
+  }
+</script>

@@ -1,70 +1,21 @@
 ---
 import heroImg from "@/assets/hero-img.jpg";
-import { Button } from "@/components/ui/button";
 import { Image } from "astro:assets";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { whatsappUrl } from "@/lib/site";
 ---
-
-<section id="inicio" class="relative overflow-hidden bg-accent/30">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="space-y-8">
-        <div class="space-y-4">
-          <h1
-            class="text-5xl sm:text-6xl lg:text-7xl font-bold text-balance leading-tight"
-          >
-            Doçura que <span class="text-primary">encanta</span> e <span
-              class="text-primary">aquece</span
-            >{" "}
-            o coração
-          </h1>
-          <p
-            class="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-xl"
-          >
-            Doces artesanais feitos com amor e ingredientes selecionados. Cada
-            mordida é uma experiência única de sabor e felicidade.
-          </p>
-        </div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <Button
-            size="lg"
-            className="rounded-full text-base group flex flex-row items-center"
-          >
-            <a
-              href="https://wa.me/5561983357945?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20um%20or%C3%A7amento."
-            >
-              Peça Agora
-            </a>
-            <ArrowRight
-              className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform"
-            />
-          </Button>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="rounded-full text-base"
-          >
-            <a href="#produtos">Ver Produtos</a>
-          </Button>
-        </div>
+<section id="inicio" class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <h1>Doçura que <span>aquece o coração.</span></h1>
+      <p>Doces artesanais feitos com amor e ingredientes selecionados, para transformar seus momentos em boas memórias.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href={whatsappUrl}>Faça seu Pedido <ArrowUpRight size={19} strokeWidth={1.7} aria-hidden="true" /></a>
+        <a class="text-link" href="#produtos">Ver Produtos <ArrowDown size={17} strokeWidth={1.7} aria-hidden="true" /></a>
       </div>
-
-      <div class="relative">
-        <div class="aspect-square rounded-3xl overflow-hidden bg-muted">
-          <Image
-            src={heroImg}
-            loading="eager"
-            alt="Doces artesanais da Sonho Doce"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <div
-          class="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-lg border border-border"
-        >
-          <p class="text-sm text-muted-foreground font-mono">Feito com</p>
-          <p class="text-2xl font-bold text-primary">❤️ Amor</p>
-        </div>
-      </div>
+    </div>
+    <div class="hero-visual">
+      <Image src={heroImg} alt="Doces artesanais de coco e chocolate em forminhas rosas da Sonho Doce" widths={[480, 768, 1200]} sizes="(max-width: 767px) 100vw, 55vw" loading="eager" fetchpriority="high" class="hero-image" />
     </div>
   </div>
 </section>

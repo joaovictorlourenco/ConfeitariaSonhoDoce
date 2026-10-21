@@ -1,55 +1,24 @@
 ---
 import { Star } from "lucide-react";
-import { Card, CardContent } from "../ui/card";
-
 const testimonials = [
-  {
-    name: "Isis Lacerda",
-    text: "Super gostoso! Fora que a dona é sempre muito educada e personaliza tudo com muito carinho. Podem comprar tranquilos",
-    rating: 5,
-  },
-  {
-    name: "Joao Paulo",
-    text: "Os melhores doces de Uberlândia! Tudo com muita qualidade e bem frescos, recomendo!",
-    rating: 5,
-  },
-  {
-    name: "Aline Lacerda",
-    text: "Doces gostosos demais! eu amei! vou comprar mais vezes",
-    rating: 5,
-  },
+  { name: "Isis Lacerda", text: "Super gostoso! Fora que a dona é sempre muito educada e personaliza tudo com muito carinho. Podem comprar tranquilos", rating: 5 },
+  { name: "Joao Paulo", text: "Os melhores doces de Uberlândia! Tudo com muita qualidade e bem frescos, recomendo!", rating: 5 },
+  { name: "Aline Lacerda", text: "Doces gostosos demais! eu amei! vou comprar mais vezes", rating: 5 },
 ];
 ---
-
-<section id="depoimentos" class="py-20 lg:py-32">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center space-y-4 mb-16">
-      <p class="text-sm font-mono text-primary uppercase tracking-wider">
-        Depoimentos
-      </p>
-      <h2 class="text-4xl sm:text-5xl font-bold text-balance">
-        O que nossos clientes dizem
-      </h2>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      {
-        testimonials.map((testimonial, index) => (
-          <Card key={index} className="border-border/50">
-            <CardContent className="p-6 space-y-4">
-              <div class="flex gap-1">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                ))}
-              </div>
-              <p class="text-muted-foreground leading-relaxed italic">
-                "{testimonial.text}"
-              </p>
-              <p class="font-bold text-foreground">{testimonial.name}</p>
-            </CardContent>
-          </Card>
-        ))
-      }
+<section id="depoimentos" class="section testimonials">
+  <div class="shell">
+    <h2>O que nossos<br />clientes dizem.</h2>
+    <div class="quotes">
+      {testimonials.map((testimonial) => (
+        <figure class="quote">
+          <div class="stars" role="img" aria-label={`${testimonial.rating} de 5 estrelas`}>
+            {Array.from({ length: testimonial.rating }).map(() => <Star size={16} strokeWidth={1.7} fill="currentColor" aria-hidden="true" />)}
+          </div>
+          <blockquote><p>“{testimonial.text}”</p></blockquote>
+          <figcaption>{testimonial.name}</figcaption>
+        </figure>
+      ))}
     </div>
   </div>
 </section>

@@ -1,79 +1,22 @@
 ---
-import trufaImg from "@/assets/confeiteira.jpeg";
+import confeiteira from "@/assets/confeiteira.jpeg";
 import { Image } from "astro:assets";
-import { Award, Heart, Sparkles } from "lucide-react";
+import { Heart, Award, Sparkles } from "lucide-react";
 ---
-
-<section id="sobre" class="py-20 lg:py-32">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="relative order-2 lg:order-1">
-        <div class="aspect-4/5 rounded-3xl overflow-hidden bg-muted">
-          <Image
-            src={trufaImg}
-            alt="Confeiteira preparando doces"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-      <div class="space-y-8 order-1 lg:order-2">
-        <div class="space-y-4">
-          <p class="text-sm font-mono text-primary uppercase tracking-wider">
-            Nossa História
-          </p>
-          <h2 class="text-4xl sm:text-5xl font-bold text-balance leading-tight">
-            Tradição e carinho em cada doce
-          </h2>
-          <p class="text-lg text-muted-foreground leading-relaxed">
-            A Sonho Doce nasceu do amor pela confeitaria e do desejo de levar
-            felicidade através de doces artesanais. Localizada em Uberlândia,
-            MG, nossa confeitaria se dedica a criar experiências únicas de
-            sabor.
-          </p>
-          <p class="text-lg text-muted-foreground leading-relaxed">
-            Cada doce é preparado com ingredientes selecionados e muito carinho,
-            mantendo receitas tradicionais e criando novos sabores que encantam
-            nossos clientes há anos.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-3 gap-6">
-          <div class="space-y-2">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10"
-            >
-              <Heart className="h-6 w-6 text-primary" />
-            </div>
-            <h3 class="font-bold">Feito com Amor</h3>
-            <p class="text-sm text-muted-foreground">
-              Cada doce é preparado com dedicação
-            </p>
-          </div>
-          <div class="space-y-2">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10"
-            >
-              <Award className="h-6 w-6 text-primary" />
-            </div>
-            <h3 class="font-bold">Qualidade</h3>
-            <p class="text-sm text-muted-foreground">
-              Ingredientes selecionados e frescos
-            </p>
-          </div>
-          <div class="space-y-2">
-            <div
-              class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10"
-            >
-              <Sparkles className="h-6 w-6 text-primary" />
-            </div>
-            <h3 class="font-bold">Artesanal</h3>
-            <p class="text-sm text-muted-foreground">
-              Receitas únicas e especiais
-            </p>
-          </div>
-        </div>
-      </div>
+<section id="sobre" class="section about">
+  <div class="shell about-grid">
+    <div class="about-photo">
+      <Image src={confeiteira} alt="Confeiteira da Sonho Doce com utensílios de confeitaria" widths={[400, 640, 800]} sizes="(max-width: 767px) 100vw, 40vw" loading="lazy" />
+    </div>
+    <div class="about-copy">
+      <h2>Tradição e carinho<br />em cada doce.</h2>
+      <p>A Sonho Doce nasceu do amor pela confeitaria e do desejo de levar felicidade através de doces artesanais. Localizada em Uberlândia, MG, nossa confeitaria se dedica a criar experiências únicas de sabor.</p>
+      <p>Cada doce é preparado com ingredientes selecionados e muito carinho, mantendo receitas tradicionais e criando novos sabores que encantam nossos clientes há anos.</p>
+      <dl class="values">
+        <div><dt><Heart size={21} strokeWidth={1.7} aria-hidden="true" /> Feito com Amor</dt><dd>Cada doce é preparado com dedicação</dd></div>
+        <div><dt><Award size={21} strokeWidth={1.7} aria-hidden="true" /> Qualidade</dt><dd>Ingredientes selecionados e frescos</dd></div>
+        <div><dt><Sparkles size={21} strokeWidth={1.7} aria-hidden="true" /> Artesanal</dt><dd>Receitas únicas e especiais</dd></div>
+      </dl>
     </div>
   </div>
 </section>
